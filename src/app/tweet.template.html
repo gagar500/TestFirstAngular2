@@ -1,0 +1,18 @@
+<div *ngFor="let tweetItem of tweetItems; let i = index">
+<div class="media space">
+    <div class="media-left">
+        <a href="#">
+            <img class="media-object" src="http://lorempixel.com/100/100/people?{{i}}" alt="people">
+        </a>
+    </div>
+    <div class="media-body" >
+        <h4 class="media-heading"><span class="topic">{{tweetItem.tweetTopic}}</span><span class="account">{{tweetItem.tweetName}}</span></h4>
+        <div><span>{{tweetItem.tweetInfo}}</span></div>
+        <div class="likeContainer">
+            <i class="glyphicon glyphicon-heart"   [class.highlighted]="tweetItem.isLike" (click)='onLike(i);' ></i><span>{{tweetItem.likeCount}}</span>
+        </div>
+    </div>
+
+</div>
+</div>
+

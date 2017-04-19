@@ -8,7 +8,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "tsc":"tsc",
+     "tsc:w":"tsc -w",
+     "lite":"lite-server",
+     "typings":"typings",
+     "postinstall": "typings install"
   },
   "private": true,
   "dependencies": {
