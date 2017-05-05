@@ -1,11 +1,28 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import {PostService} from './post.service';
+import {Post} from './post';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  
+   isLoading = true;
+
+
+//   constructor(private _postService:PostService){
+//  //   this._postService.createPost({UserId:1,id:null,title:'korn',body:'korn body'});
+//   }
+
+   ngOnInit(): void {
+    //  this._postService.getPost().subscribe(x=> {
+    //    this.isLoading=false;
+    //    console.log(x[0].UserId)});
+    }
+
   title = 'app works!';
   post={
     isActive:true

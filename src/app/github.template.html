@@ -1,0 +1,21 @@
+<div>
+ <div *ngIf="isLoading">
+    <i class="fa fa-spinner fa-spin fa-3x"> </i>
+  </div>
+
+<div>
+<h3>@{{github.login}}</h3>
+<a href="{{github.html_url}}"><img class="img-circle" height="120px" width="120px"  src="{{github.avatar_url}}" alt="user profile" /></a>
+</div>
+
+<div>
+<h3>Follower</h3>
+<ul>
+    <li *ngFor="let follower of followers">
+    <a href="{{follower.html_url}}"><img class="img-circle"  height="120px" width="120px"   src="{{follower.avatar_url}}" alt="user profile" /></a>
+    <span>{{follower.login}}</span>
+    </li>
+  </ul>
+</div>
+
+</div>
